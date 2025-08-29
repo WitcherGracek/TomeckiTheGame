@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TomeckiController : MonoBehaviour
@@ -17,6 +18,8 @@ public class TomeckiController : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI points;
     [SerializeField] Image wkurwMeter;
+    public float deathDistance;
+    [SerializeField] int numberLevel;
 
     private void Awake()
     {
@@ -29,6 +32,7 @@ public class TomeckiController : MonoBehaviour
     {
         point = 0;
         ouchMetter = 0;
+        PlayerPrefs.SetString("lastLevel",SceneManager.GetActiveScene().name);
     }
     private void Update()
     {
@@ -56,12 +60,13 @@ public class TomeckiController : MonoBehaviour
 
         if(point >= neededPoints)
         {
-            //wygra³eœ
+            PlayerPrefs.SetInt("level", numberLevel);
+            SceneManager.LoadScene("Win");
         }
 
         if(ouchMetter >= maxOuch)
         {
-            //powiesili Ciê
+            SceneManager.LoadScene("Death");
         }
     }
 

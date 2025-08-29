@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] Tutorial tutorial;
-
+    [SerializeField] GameObject chapterSelectMenu;
     public void GoToMenu()
     {
         SceneManager.LoadScene("MainMenu");
@@ -23,6 +23,8 @@ public class MenuManager : MonoBehaviour
         if (levelName == "0")
             SceneManager.LoadScene("MainMenu");
 
+        SceneManager.LoadScene(levelName);
+
     }
 
     public void StartTutorial()
@@ -30,6 +32,15 @@ public class MenuManager : MonoBehaviour
         tutorial.SetUpAndStart();
     }
 
+    public void OpenChapterSelect()
+    {
+        chapterSelectMenu.SetActive(true);
+    }
+
+    public void CloseChapterSelect()
+    {
+        chapterSelectMenu.SetActive(false);
+    }
 
     // Update is called once per frame
     void Update()

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d1c4bcdb1b9bbec44a39a7e162aea7c7
+guid: af2c06a85b2b95f4caf48294c73eb25d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 361622691779053922
-    second: treningBackground_0
+      213: -4522064208414700646
+    second: chapter1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: treningBackground_0
+      name: chapter1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 26906361cedb40500800000000000000
-      internalID: 361622691779053922
+      spriteID: a9b0fe5bf866e31c0800000000000000
+      internalID: -4522064208414700646
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      treningBackground_0: 361622691779053922
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

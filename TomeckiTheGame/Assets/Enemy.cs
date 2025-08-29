@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -72,6 +73,10 @@ public class Enemy : MonoBehaviour
             {
                 Destroy(this.gameObject);
             }
+        }
+        if(Vector2.Distance(gameObject.transform.position, TomeckiController.singleton.gameObject.transform.position) <= TomeckiController.singleton.deathDistance)
+        {
+            SceneManager.LoadScene("Death");
         }
     }
 

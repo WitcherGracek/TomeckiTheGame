@@ -3,8 +3,9 @@ using Swinie.Audio;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Tutorial : MonoBehaviour
+public class Lore : MonoBehaviour
 {
     [System.Serializable]
     struct DialogScene
@@ -15,15 +16,27 @@ public class Tutorial : MonoBehaviour
         public AudioAsset asset;
     }
 
+    [SerializeField] AudioSource defaultMusic;
+    [SerializeField] AudioAsset cutsceneMusic;
+    [SerializeField] string levelName;
+
     [SerializeField] List<DialogScene> dialogScenes;
     [SerializeField] AudioSource dialogPlayer;
     [SerializeField] TextMeshProUGUI text;
     int counter = 0;
-    [SerializeField] GameObject tutorialPanel;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            NextStage();
+        }
+    }
     public void SetUpAndStart()
     {
-        tutorialPanel.SetActive(true);
+        defaultMusic.Stop();
+        if(cutsceneMusic != null)
+            cutsceneMusic.PlayOnSource(defaultMusic);
 
         dialogScenes[0].stage.SetActive(true);
         text.text = dialogScenes[0].text.ToString();
@@ -39,10 +52,8 @@ public class Tutorial : MonoBehaviour
 
         if(counter == dialogScenes.Count)
         {
-            tutorialPanel.SetActive(false);
-            dialogPlayer.Stop();
+            SceneManager.LoadScene(levelName);
             counter = 0;
-            return;
         }
 
 
