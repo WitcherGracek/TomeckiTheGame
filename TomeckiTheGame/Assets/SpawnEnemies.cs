@@ -21,7 +21,7 @@ public class SpawnEnemies : MonoBehaviour
         if(timer >= spawnTime)
         {
             var x = Instantiate(enemyPrefab, spawnPosition.transform.position, spawnPosition.transform.rotation);
-            x.GetComponent<Enemy>().speed = enemySpeed; 
+            x.GetComponent<Enemy>().speed = enemySpeed/100;
             TomeckiController.singleton.incomingEnemies.Add(x);
 
             timer = 0;

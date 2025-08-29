@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.62, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.59772366, y: 0.59772366, z: 0.59772366}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 218119206206439625, guid: 3e118a2f526ed0647aaf4ea3a1856768, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &4305655407399903409
@@ -102,3 +102,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   type: 0
+  traitor: {fileID: 21300000, guid: d533e3161439d25498feb44f98623393, type: 3}
+  worker: {fileID: 21300000, guid: 3e118a2f526ed0647aaf4ea3a1856768, type: 3}
+  jew: {fileID: 21300000, guid: 52c0f0973d98cfd4ca5270f1178cbb87, type: 3}
+  villager: {fileID: 21300000, guid: 8f598612ab9ded84da425f3a6cb20435, type: 3}
+  deadTraitor: {fileID: 21300000, guid: 981f32c25c1a4ef4ea93824cdb5b1547, type: 3}
+  deadWorker: {fileID: 21300000, guid: f517106af07613f48998d5237ded97f3, type: 3}
+  deadJew: {fileID: 21300000, guid: a9f98dec406a7e34cba73c1621510026, type: 3}
+  deadVillager: {fileID: 21300000, guid: ee94843d914a86842b6317b69f066dae, type: 3}
+  deadSpeed: 0.6
