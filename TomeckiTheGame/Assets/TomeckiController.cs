@@ -60,7 +60,11 @@ public class TomeckiController : MonoBehaviour
 
         if(point >= neededPoints)
         {
-            PlayerPrefs.SetInt("level", numberLevel);
+            if(PlayerPrefs.GetInt("level", 1) <= numberLevel + 1)
+            {
+                PlayerPrefs.SetInt("level", numberLevel + 1);
+            }
+
             SceneManager.LoadScene("Win");
         }
 

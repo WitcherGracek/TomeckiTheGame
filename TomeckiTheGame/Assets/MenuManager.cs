@@ -45,6 +45,14 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Delete))
+        {
+            PlayerPrefs.DeleteAll();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Home))
+        {
+            PlayerPrefs.SetInt("level",6);
+        }
     }
 }

@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9182a09857710cd4cb2bc080e9a9790e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 2
   type: 0
   traitor: {fileID: 21300000, guid: d533e3161439d25498feb44f98623393, type: 3}
   worker: {fileID: 21300000, guid: 3e118a2f526ed0647aaf4ea3a1856768, type: 3}

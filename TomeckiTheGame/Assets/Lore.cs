@@ -47,14 +47,17 @@ public class Lore : MonoBehaviour
 
     public void NextStage()
     {
-        dialogScenes[counter].stage.SetActive(false);
+        
         counter++;
 
         if(counter == dialogScenes.Count)
         {
             SceneManager.LoadScene(levelName);
             counter = 0;
+            return;
         }
+
+        dialogScenes[counter-1].stage.SetActive(false);
 
 
         if (dialogScenes[counter].asset != null)

@@ -64,7 +64,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector2(transform.position.x - speed, transform.position.y);
+        transform.position = new Vector2(transform.position.x - (speed * Time.deltaTime), transform.position.y);
 
         if (isDying)
         {
